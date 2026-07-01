@@ -45,6 +45,13 @@ Complete documentation for the Nix-on-macOS configuration.
   - Homebrew integration
   - Useful shell aliases
 
+- **[OLLAMA_SETUP.md](OLLAMA_SETUP.md)** 🤖
+  - Local LLM inference with Ollama
+  - Apple Silicon Metal acceleration
+  - qwen2.5-coder:32b and llama3.3:70b models
+  - API usage and integration examples
+  - Performance tuning and troubleshooting
+
 ### Migration & Analysis
 
 - **[MIGRATION.md](MIGRATION.md)**

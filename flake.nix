@@ -26,6 +26,9 @@
         system = config.system.architecture;
 
         modules = [
+          # Ollama LLM service configuration
+          ./modules/ollama.nix
+
           # Core nix-darwin configuration
           ({ pkgs, ... }: {
             # Nix daemon configuration
