@@ -1,0 +1,169 @@
+{
+  "models": [
+    {
+      "title": "Llama 3.3 70B (Chat)",
+      "provider": "ollama",
+      "model": "llama3.3:70b",
+      "apiBase": "http://localhost:11434",
+      "requestOptions": {
+        "timeout": 300000
+      }
+    },
+    {
+      "title": "Qwen 2.5 Coder 32B (Fast)",
+      "provider": "ollama",
+      "model": "qwen2.5-coder:32b",
+      "apiBase": "http://localhost:11434",
+      "requestOptions": {
+        "timeout": 120000
+      }
+    },
+    {
+      "title": "Qwen 2.5 32B (Instruct)",
+      "provider": "ollama",
+      "model": "qwen2.5:32b",
+      "apiBase": "http://localhost:11434",
+      "requestOptions": {
+        "timeout": 120000
+      }
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Qwen 32B Coder (Autocomplete)",
+    "provider": "ollama",
+    "model": "qwen2.5-coder:32b",
+    "apiBase": "http://localhost:11434"
+  },
+  "embeddingsProvider": {
+    "provider": "ollama",
+    "model": "nomic-embed-text",
+    "apiBase": "http://localhost:11434"
+  },
+  "reranker": {
+    "name": "llm",
+    "params": {
+      "modelTitle": "Qwen 2.5 Coder 32B (Fast)"
+    }
+  },
+  "contextProviders": [
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
+      "params": {}
+    },
+    {
+      "name": "folder",
+      "params": {}
+    },
+    {
+      "name": "codebase",
+      "params": {}
+    }
+  ],
+  "slashCommands": [
+    {
+      "name": "edit",
+      "description": "Edit selected code"
+    },
+    {
+      "name": "comment",
+      "description": "Write comments for the selected code"
+    },
+    {
+      "name": "share",
+      "description": "Export this session to markdown"
+    },
+    {
+      "name": "cmd",
+      "description": "Generate a shell command"
+    },
+    {
+      "name": "commit",
+      "description": "Generate a commit message"
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "test",
+      "prompt": "{{{ input }}}\n\nWrite a comprehensive test suite for the above code using the project's testing framework. Include edge cases and error scenarios.",
+      "description": "Write tests for highlighted code"
+    },
+    {
+      "name": "refactor",
+      "prompt": "{{{ input }}}\n\nRefactor the above code to improve readability, maintainability, and performance. Explain your changes.",
+      "description": "Refactor highlighted code"
+    },
+    {
+      "name": "docs",
+      "prompt": "{{{ input }}}\n\nWrite comprehensive documentation for the above code, including docstrings, inline comments, and usage examples.",
+      "description": "Document highlighted code"
+    },
+    {
+      "name": "review",
+      "prompt": "{{{ input }}}\n\nPerform a thorough code review of the above code. Identify bugs, security issues, performance problems, and suggest improvements.",
+      "description": "Review highlighted code"
+    },
+    {
+      "name": "explain",
+      "prompt": "{{{ input }}}\n\nExplain what the above code does in detail, including the purpose, logic flow, and any complex algorithms or patterns used.",
+      "description": "Explain highlighted code"
+    }
+  ],
+  "allowAnonymousTelemetry": false,
+  "docs": [
+    {
+      "title": "Nix Manual",
+      "startUrl": "https://nixos.org/manual/nix/stable/"
+    },
+    {
+      "title": "nix-darwin",
+      "startUrl": "https://daiderd.com/nix-darwin/manual/"
+    },
+    {
+      "title": "Home Manager",
+      "startUrl": "https://nix-community.github.io/home-manager/"
+    }
+  ],
+  "experimental": {
+    "modelRoles": {
+      "inlineEdit": "Qwen 2.5 Coder 32B (Fast)",
+      "applyCodeBlock": "Qwen 2.5 Coder 32B (Fast)",
+      "repoMapFileSelection": "Qwen 2.5 Coder 32B (Fast)",
+      "summarize": "Llama 3.3 70B (Chat)"
+    },
+    "promptPath": "~/.continue/prompts",
+    "quickActions": [
+      {
+        "title": "Quick Fix",
+        "prompt": "Fix the error or issue in the selected code"
+      },
+      {
+        "title": "Optimize",
+        "prompt": "Optimize the selected code for performance"
+      },
+      {
+        "title": "Simplify",
+        "prompt": "Simplify the selected code while maintaining functionality"
+      }
+    ]
+  },
+  "ui": {
+    "fontSize": 14,
+    "displayRawMarkdown": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "// === Continue.dev Extension Settings ===": "",
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": true,
+  "continue.manuallyRunningSserver": false,
+
+  "// === Cody Extension Settings (Alternative to Continue) ===": "",
+  "cody.serverEndpoint": "http://localhost:11434",
+  "cody.autocomplete.enabled": true,
+  "cody.autocomplete.advanced.provider": "ollama",
+  "cody.autocomplete.advanced.model": "qwen2.5-coder:32b",
+
+  "// === CodeGPT Extension Settings ===": "",
+  "codegpt.apiKey": "ollama",
+  "codegpt.provider": "Ollama",
+  "codegpt.model": "qwen2.5-coder:32b",
+  "codegpt.maxTokens": 2048,
+  "codegpt.temperature": 0.3,
+  "codegpt.ollamaApiUrl": "http://localhost:11434",
+
+  "// === GitHub Copilot (Fallback - requires subscription) ===": "",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true
+  },
+
+  "// === Language-Specific AI Settings ===": "",
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.tabCompletion": "on",
+
+  "// === AI-Powered Features ===": "",
+  "editor.accessibilitySupport": "auto",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.parameterHints.enabled": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
+
+  "// === Terminal Integration ===": "",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.suggest.enabled": true,
+
+  "// === Extension Recommendations ===": "",
+  "extensions.ignoreRecommendations": false,
+
+  "// === Workspace Trust ===": "",
+  "security.workspace.trust.untrustedFiles": "open"
+}

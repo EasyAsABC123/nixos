@@ -26,8 +26,11 @@
         system = config.system.architecture;
 
         modules = [
-          # Ollama LLM service configuration
-          ./modules/ollama.nix
+          # Conditionally load Ollama module (only on personal laptop)
+          # Controlled by config.features.enableOllama flag
+        ] ++ (if config.features.enableOllama or false
+              then [ ./modules/ollama.nix ]
+              else [ ]) ++ [
 
           # Core nix-darwin configuration
           ({ pkgs, ... }: {

@@ -10,15 +10,33 @@
     # No rocm package needed - Metal is the native backend
     acceleration = null;  # null = use default Metal backend on macOS
 
-    # Automatically pull large coding models on system activation
+    # Automatically pull models on system activation
     # With 128GB RAM, you can keep multiple large models loaded simultaneously
     # These will be downloaded to /var/lib/ollama/models/
     models = [
-      # Qwen 2.5 Coder 32B - Excellent for code generation and explanation (~19GB)
+      # === PRIMARY MODELS ===
+
+      # Qwen 2.5 Coder 32B - Fast autocomplete and code generation (~19GB)
       "qwen2.5-coder:32b"
 
-      # Llama 3.3 70B - Strong general-purpose reasoning and coding (~40GB)
+      # Llama 3.3 70B - Deep reasoning, chat, and refactoring (~40GB)
       "llama3.3:70b"
+
+      # === EMBEDDINGS MODEL ===
+
+      # Nomic Embed Text - For semantic search and RAG (~274MB)
+      # Essential for codebase context and Continue.dev embeddings
+      "nomic-embed-text"
+
+      # === OPTIONAL MODELS ===
+
+      # Qwen 2.5 32B Instruct - Alternative chat model (~19GB)
+      # Good balance of speed and quality for conversations
+      # "qwen2.5:32b"
+
+      # Qwen 2.5 7B - Lightweight for quick tasks (~4.7GB)
+      # Use for simple completions when speed is critical
+      # "qwen2.5:7b"
 
       # DeepSeek Coder V2 236B - State-of-the-art coding model (~140GB)
       # With 128GB RAM, you can actually run this beast!
@@ -31,6 +49,16 @@
 
       # CodeLlama 70B - Specialized for code, alternative to Qwen (~40GB)
       # "codellama:70b"
+
+      # === MULTIMODAL (Vision/Audio) ===
+
+      # LLaVA 34B - Vision + language understanding (~19GB)
+      # Can analyze screenshots, diagrams, and UI mockups
+      # "llava:34b"
+
+      # Gemma 2 27B - Multimodal reasoning (~16GB)
+      # Note: Gemma4 not yet available, Gemma 2 is current version
+      # "gemma2:27b"
     ];
 
     # Environment variables for Ollama daemon
