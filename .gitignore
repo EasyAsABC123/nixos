@@ -1,0 +1,33 @@
+# Nix build outputs
+result
+result-*
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Direnv
+.direnv/
+.envrc
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Temporary files
+*.tmp
+*.log
+
+# Personal configuration overrides (optional)
+# Uncomment if you want to keep personal overrides local
+# home.local.nix
+# settings.local.nix

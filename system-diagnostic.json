@@ -1,0 +1,60 @@
+{
+  "system": {
+    "architecture": "arm64",
+    "os": "macOS",
+    "version": "26.5.1",
+    "build": "25F80",
+    "user": "jschuhmann"
+  },
+  "homebrew": {
+    "formulas": [
+      "abseil", "ada-url", "antlr", "aom", "arm-none-eabi-binutils", "arm-none-eabi-gcc@8",
+      "asciinema", "at-spi2-core", "autoconf", "avr-binutils", "avr-gcc@8", "avrdude",
+      "aws-iam-authenticator", "awscli", "azure-cli", "bash", "bat", "bdw-gc", "bfg", "black",
+      "boost", "bootloadhid", "brotli", "c-ares", "ca-certificates", "caddy", "cairo", "capstone",
+      "certifi", "cffi", "clang-format", "cmake", "conftest", "confuse", "coreutils", "cryptography",
+      "curl", "dav1d", "dbus", "dfu-programmer", "dfu-util", "direnv", "dive", "docker-credential-helper",
+      "double-conversion", "dtc", "dyff", "edencommon", "fb303", "fbthrift", "ffmpeg", "fizz", "flac",
+      "fmt", "folly", "fontconfig", "freetype", "fribidi", "fswatch", "gd", "gdbm", "gdk-pixbuf",
+      "gettext", "gflags", "ggml", "gh", "ghostscript", "giflib", "git", "git-filter-repo", "git-lfs",
+      "glib", "glog", "glow", "gmp", "gnu-tar", "gnupg", "gnutls", "go", "gpgme", "gpgmepp",
+      "graphite2", "graphviz", "grep", "groff", "grpc", "grpcurl", "gsettings-desktop-schemas",
+      "gtk+3", "gts", "guile", "harfbuzz", "hdrhistogram_c", "helm", "helm-ls", "heroku",
+      "hicolor-icon-theme", "hid_bootloader_cli", "hidapi", "highway", "hiredis", "icu4c@78",
+      "imath", "iperf3", "isl", "ivykis", "jasper", "jbig2dec", "jemalloc", "jenv", "jpeg-turbo",
+      "jpeg-xl", "jq", "json-c", "json5", "just", "k9s", "krb5", "kubebuilder", "kubeconform",
+      "kubectl-argo-rollouts", "kubernetes-cli", "lame", "leptonica", "libarchive", "libassuan",
+      "libavif", "libb2", "libdatrie", "libdbi", "libdeflate", "libebml", "libepoxy", "libestr",
+      "libev", "libevent", "libfastjson", "libftdi", "libgcrypt", "libgit2", "libgpg-error",
+      "libiconv", "libidn", "libidn2", "libimagequant", "libksba", "libmatroska", "libmaxminddb",
+      "libmpc", "libnet", "libnghttp2", "libnghttp3", "libngtcp2", "libogg", "libomp", "libpaho-mqtt",
+      "libpaper", "libpng", "libraqm", "librdkafka", "librsvg", "libslirp", "libsodium", "libssh",
+      "libssh2", "libtasn1", "libthai", "libtiff", "libtommath", "libtool", "libunistring", "libusb",
+      "libusb-compat", "libuv", "libvmaf", "libvorbis", "libvpx", "libwebsockets", "libx11", "libxau",
+      "libxcb", "libxdmcp", "libxext", "libxfixes", "libxi", "libxrender", "libxtst", "libyaml",
+      "little-cms2", "llama.cpp", "lld@21", "llhttp", "llvm@21", "lpeg", "luajit", "luv", "lz4",
+      "lzlib", "lzo", "m4", "make", "maven", "md4c", "mdloader", "merve", "mkvtoolnix", "mongo-c-driver",
+      "mpdecimal", "mpfr", "mvfst", "nbytes", "ncurses", "neovim", "net-snmp", "netpbm", "nettle",
+      "nghttp2", "node", "node@24", "npth", "nspr", "nss", "nvm", "oniguruma", "openapi-generator",
+      "openexr", "openjdk", "openjpeg", "openjph", "openldap", "openssl@3", "openssl@4", "openvpn",
+      "opus", "p11-kit", "pack", "pango", "pcre2", "pillow", "pinentry", "pipx", "pixman", "pkcs11-helper",
+      "pkgconf", "pngpaste", "podman", "poetry", "poppler", "popt", "postgresql@15", "powerlevel10k",
+      "pre-commit", "protobuf", "protobuf-c", "psutils", "pugixml", "putty", "pycparser", "pyenv",
+      "python@3.10", "python@3.11", "python@3.12", "python@3.13", "python@3.14", "qemu", "qmk",
+      "qtbase", "rabbitmq-c", "rclone", "re2", "readline", "reattach-to-user-namespace", "redis",
+      "regal", "renovate", "riemann-client", "ripgrep", "rsyslog", "ruff", "sbt", "sdl2", "shellcheck",
+      "shellspec", "shfmt", "simdjson", "simdutf", "snappy", "snyk", "speakeasy", "sqlite", "sshpass",
+      "starship", "stern", "svt-av1", "swagger-codegen", "syslog-ng", "task", "tcl-tk", "teensy_loader_cli",
+      "temporal", "terraform", "terraform-ls", "tesseract", "tfenv", "tflint", "tmux", "tox", "tree",
+      "tree-sitter", "tree-sitter@0.25", "ttyd", "uchardet", "unbound", "unibilium", "utf8proc", "uv",
+      "uvwasi", "vault", "vde", "vhs", "wangle", "watch", "watchman", "webp", "wget", "workmux", "x264",
+      "x265", "xorgproto", "xxhash", "xz", "yarn", "yq", "zig", "zoxide", "zsh-completions",
+      "zsh-syntax-highlighting", "zstd"
+    ],
+    "casks": [
+      "1password-cli", "aerospace", "font-hack-nerd-font", "gcloud-cli", "ghostty", "gswitch",
+      "mysqlworkbench", "ngrok", "quarto", "rectangle", "secretive", "smcfancontrol", "sublime-text",
+      "temurin@17", "warp", "zulu@17"
+    ]
+  }
+}
