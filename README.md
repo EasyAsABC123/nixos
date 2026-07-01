@@ -1,6 +1,12 @@
-# Nix Home Manager Configuration for macOS
+# Nix-on-macOS Configuration
 
-This repository contains a declarative Home Manager configuration that replaces Homebrew-managed CLI tools with Nix-managed equivalents.
+Declarative macOS system configuration using [nix-darwin](https://github.com/LnL7/nix-darwin) and [Home Manager](https://github.com/nix-community/home-manager).
+
+## 🎯 What This Does
+
+- **System Configuration** via nix-darwin: macOS defaults, Homebrew management, system services
+- **User Environment** via Home Manager: ~180 CLI packages, shell configuration, dotfiles
+- **Modular Architecture**: Single source of truth in `config.nix`, no hardcoded values
 
 ## What's Included
 
