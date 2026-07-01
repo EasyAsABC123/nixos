@@ -11,25 +11,39 @@
     acceleration = null;  # null = use default Metal backend on macOS
 
     # Automatically pull large coding models on system activation
+    # With 128GB RAM, you can keep multiple large models loaded simultaneously
     # These will be downloaded to /var/lib/ollama/models/
     models = [
-      # Qwen 2.5 Coder 32B - Excellent for code generation and explanation
+      # Qwen 2.5 Coder 32B - Excellent for code generation and explanation (~19GB)
       "qwen2.5-coder:32b"
 
-      # Llama 3.3 70B - Strong general-purpose reasoning and coding
+      # Llama 3.3 70B - Strong general-purpose reasoning and coding (~40GB)
       "llama3.3:70b"
+
+      # DeepSeek Coder V2 236B - State-of-the-art coding model (~140GB)
+      # With 128GB RAM, you can actually run this beast!
+      # Uncomment when you're ready for the ultimate coding assistant:
+      # "deepseek-coder-v2:236b"
+
+      # Qwen 2.5 72B - Alternative large general model (~43GB)
+      # Excellent for reasoning tasks, can run alongside 32B coder
+      # "qwen2.5:72b"
+
+      # CodeLlama 70B - Specialized for code, alternative to Qwen (~40GB)
+      # "codellama:70b"
     ];
 
     # Environment variables for Ollama daemon
-    # These optimize performance for Apple Silicon's unified memory architecture
+    # Optimized for M5 Max with 128GB RAM - can handle multiple large models simultaneously
     environmentVariables = {
-      # Allow 4 parallel model instances to leverage massive RAM pool
-      # Useful for multi-file code analysis and parallel requests
-      OLLAMA_NUM_PARALLEL = "4";
+      # Allow 8 parallel model instances to leverage 128GB RAM pool
+      # With this much memory, you can run multiple 70B models concurrently
+      # Useful for multi-file code analysis, parallel requests, and mixed model workflows
+      OLLAMA_NUM_PARALLEL = "8";
 
       # Keep models loaded in memory for 24 hours
+      # With 128GB RAM, keeping multiple large models resident is no problem
       # Prevents expensive reload on each request (critical for 70B models)
-      # With unified memory, this allows instant inference after warmup
       OLLAMA_KEEP_ALIVE = "24h";
 
       # Optional: Explicitly set host binding (default is 127.0.0.1:11434)

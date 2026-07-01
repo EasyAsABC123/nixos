@@ -10,7 +10,7 @@
   # System configuration
   system = {
     hostname = "jschuhmann-macbook";
-    architecture = "aarch64-darwin";  # Change to "x86_64-darwin" for Intel Macs
+    architecture = "aarch64-darwin";  # Apple Silicon (M5 Max, 128GB RAM)
     stateVersion = 5;  # nix-darwin state version
   };
 
