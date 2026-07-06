@@ -260,7 +260,7 @@
             useUserPackages = true;
 
             # Pass configuration variables to home.nix
-            extraSpecialArgs = { inherit config; };
+            extraSpecialArgs = { userConfig = config; };
 
             users.${config.user.username} = import ./home.nix;
           };
