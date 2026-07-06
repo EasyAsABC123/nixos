@@ -22,13 +22,13 @@
       configPersonal = import ./config-personal.nix;
 
       # Helper function to create Darwin system
-      mkDarwinSystem = config: darwin.lib.darwinSystem {
-        system = config.system.architecture;
+      mkDarwinSystem = userConfig: darwin.lib.darwinSystem {
+        system = userConfig.system.architecture;
 
         modules = [
           # Conditionally load Ollama module (only on personal laptop)
-          # Controlled by config.features.enableOllama flag
-        ] ++ (if config.features.enableOllama or false
+          # Controlled by userConfig.features.enableOllama flag
+        ] ++ (if userConfig.features.enableOllama or false
               then [ ./modules/ollama.nix ]
               else [ ]) ++ [
 
@@ -46,7 +46,7 @@
                 auto-optimise-store = true;
 
                 # Trusted users for daemon
-                trusted-users = [ "@admin" config.user.username ];
+                trusted-users = [ "@admin" userConfig.user.username ];
 
               # Substituters and cache
               substituters = [
@@ -115,7 +115,7 @@
           # macOS system defaults
           system = {
             # Set system state version
-            stateVersion = config.system.stateVersion;
+            stateVersion = userConfig.system.stateVersion;
 
             defaults = {
               # Dock settings
@@ -246,7 +246,7 @@
           system.configurationRevision = null;
 
           # The platform the configuration will be used on
-          nixpkgs.hostPlatform = config.system.architecture;
+          nixpkgs.hostPlatform = userConfig.system.architecture;
 
           # Allow unfree packages
           nixpkgs.config.allowUnfree = true;
@@ -260,9 +260,9 @@
             useUserPackages = true;
 
             # Pass configuration variables to home.nix
-            extraSpecialArgs = { userConfig = config; };
+            extraSpecialArgs = { inherit userConfig; };
 
-            users.${config.user.username} = import ./home.nix;
+            users.${userConfig.user.username} = import ./home.nix;
           };
         }
       ];
