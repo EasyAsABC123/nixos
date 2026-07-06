@@ -17,12 +17,12 @@
 
   outputs = { self, nixpkgs, darwin, home-manager, ... }:
     let
-      # Import configuration variables
-      config = import ./config.nix;
-    in
-    {
-      # System configuration
-      darwinConfigurations.${config.system.hostname} = darwin.lib.darwinSystem {
+      # Import both configurations
+      configWork = import ./config.nix;
+      configPersonal = import ./config-personal.nix;
+
+      # Helper function to create Darwin system
+      mkDarwinSystem = config: darwin.lib.darwinSystem {
         system = config.system.architecture;
 
         modules = [
@@ -266,6 +266,13 @@
           };
         }
       ];
+      };
+    in
+    {
+      # Work laptop configuration
+      darwinConfigurations.jschuhmann-work = mkDarwinSystem configWork;
+
+      # Personal laptop configuration (M5 Max with Ollama)
+      darwinConfigurations.jschuhmann-personal = mkDarwinSystem configPersonal;
     };
-  };
 }
